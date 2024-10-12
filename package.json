@@ -1,13 +1,18 @@
 {
   "name": "nodejs2",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "newexpress.js",
   "type": "module",
   "scripts": {
+    "start": "node newexpress.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Node.js project",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {}
 }
