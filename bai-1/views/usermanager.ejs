@@ -1,0 +1,77 @@
+<%- include('layout/header'); %>
+<div style="margin-top: 120px; text-align: center;">
+  <!-- Search Filters Section -->
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px;">
+
+      <form action="/" method="GET">
+        <label>Tiêu đề hoặc Mô tả</label>
+        <input value="<%= q %>" name="q" type="search" id="default-search"  style="padding: 5px;"> 
+        
+    
+      <label>Trạng thái</label>
+      <select style="padding: 5px;">
+          <option>New</option>
+          <option>Pending</option>
+          <option>Done</option>
+      </select>
+
+      <label>Ngày hoàn thành</label>
+      <input type="date" style="padding: 5px;">
+      <span>&lt;</span>
+      <input type="date" style="padding: 5px;">
+
+      <button type="submit" style="padding: 5px 10px;">Tìm Kiếm</button>
+    </form>
+  </div>
+
+
+  <!-- Table Section -->
+  <table class="table" style="width: 80%; margin: 0 auto; border-collapse: collapse; text-align: left;">
+      <thead>
+          <tr>
+              <th scope="col" style="padding: 10px; border: 1px solid #ddd;">Tiêu đề</th>
+              <th scope="col" style="padding: 10px; border: 1px solid #ddd;">Mô tả</th>
+              <th scope="col" style="padding: 10px; border: 1px solid #ddd;">Trạng thái</th>
+              <th scope="col" style="padding: 10px; border: 1px solid #ddd;">Due Date</th>
+              <th scope="col" style="padding: 10px; border: 1px solid #ddd;">Điểm nhiệm vụ</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% users.forEach((user)=>{ %>
+          <tr>
+              <td style="padding: 10px; border: 1px solid #ddd;"><%= user.title %></td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><%= user.describe %></td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><%= user.status %></td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><%= user.Duedate %></td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><%= user.numberoftask %></td>
+          </tr>
+          <%})%>
+      </tbody>
+  </table>
+</div>
+<div class="container">
+  <div class="task-id">Công việc #22424</div>
+  
+  <div class="task-detail">
+      <div class="label">Tiêu đề:</div>
+      <div class="content">Học JS</div>
+  </div>
+  <div class="task-detail">
+      <div class="label">Mô Tả:</div>
+      <div class="content">Học JS</div>
+  </div>
+  <div class="task-detail">
+      <div class="label">Trạng thái:</div>
+      <div class="content">Pending</div>
+  </div>
+  <div class="task-detail">
+      <div class="label">Due Date:</div>
+      <div class="content">26/10/2024</div>
+  </div>
+  <div class="task-detail">
+      <div class="label">Điểm nhiệm vụ:</div>
+      <div class="content">30</div>
+  </div>
+</div>
+
+<%- include('layout/footer'); %>

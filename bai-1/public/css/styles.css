@@ -1,0 +1,119 @@
+.navbar {
+    background-color: white;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.navbar-brand {
+    font-weight: 500 !important;
+    color: green !important;
+    font-size: 24px !important;
+    transition: 0.3s color !important;
+}
+
+.navbar-brand:hover {
+    color: teal !important;
+}
+
+.login-button {
+    background-color: green;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    /* Sửa lại */
+}
+
+.login-button:hover {
+    background-color: teal;
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: black;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: green;
+        visibility: hidden;
+        transition: width 0.3s ease-in-out,
+            visibility 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: left;
+}
+
+/* Title styling */
+.task-id {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Label and content styling */
+.task-detail {
+    display: flex;
+    justify-content: space-around;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Label styling */
+.task-detail .label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Right-aligned content */
+.task-detail .content {
+    text-align: right;
+    color: #666;
+}
